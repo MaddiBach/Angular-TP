@@ -15,9 +15,21 @@ import { MissionControlComponent } from './exercises/src/service-interaction/mis
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
+  {
+    path: 'home',
+    component: HomeComponent,
+    data: { animation: 'moveFromLeft' },
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    data: { animation: 'moveFromRight' },
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
+    data: { animation: 'fader' },
+  },
   {
     path: 'exercises',
     component: ExercisesComponent,

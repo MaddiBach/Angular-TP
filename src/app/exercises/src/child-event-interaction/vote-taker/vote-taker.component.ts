@@ -11,6 +11,7 @@ export class VoteTakerComponent {
   voters = ['Dr. IQ', 'Celeritas', 'Bombasto'];
 
   onVoted(agreed: boolean) {
+    console.log('GATE');
     if (agreed) {
       this.agreed++;
     } else {

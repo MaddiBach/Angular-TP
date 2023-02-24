@@ -1,0 +1,18 @@
+import { Component } from '@angular/core';
+import { EventEmitter, Input, Output } from '@angular/core';
+
+@Component({
+  selector: 'app-voter',
+  templateUrl: './voter.component.html',
+  styleUrls: ['./voter.component.css'],
+})
+export class VoterComponent {
+  @Input() name = '';
+  @Output() voted = new EventEmitter<boolean>();
+  didVote: boolean = false;
+
+  vote(agreed: boolean) {
+    this.voted.emit(agreed);
+    this.didVote = true;
+  }
+}

@@ -1,0 +1,8 @@
+<div class="exercise">
+  <app-voter
+    *ngFor="let voter of voters"
+    [name]="voter"
+    (voted)="onVoted($event)"
+  >
+  </app-voter>
+</div>

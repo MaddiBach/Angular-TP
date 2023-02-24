@@ -1,0 +1,20 @@
+/* nav CSS */
+
+nav {
+  background-color: #333;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-family: Popins;
+}
+
+nav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}

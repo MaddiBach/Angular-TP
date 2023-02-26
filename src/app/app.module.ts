@@ -28,8 +28,7 @@ import { MissionControlComponent } from './exercises/src/service-interaction/mis
 import { AttributeDirectiveComponent } from './exercises/src/attribute-directive/attribute-directive.component';
 import { HighlightDirective } from './exercises/src/attribute-directive/highlight-directive.directive';
 import { HideAfterDirective } from './exercises/src/attribute-directive/hide-after.directive';
-
-
+import { RestaurantComponent } from './exercises/src/restaurant/restaurant.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +59,7 @@ import { HideAfterDirective } from './exercises/src/attribute-directive/hide-aft
     AttributeDirectiveComponent,
     HighlightDirective,
     HideAfterDirective,
+    RestaurantComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

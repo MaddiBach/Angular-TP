@@ -34,17 +34,17 @@ export const fader = trigger('routeAnimations', [
 // Positioned
 
 export const slider = trigger('routeAnimations', [
-  transition('* => isLeft', slideTo('left')),
-  transition('* => isRight', slideTo('right')),
-  transition('isRight => *', slideTo('left')),
-  transition('isLeft => *', slideTo('right')),
+  transition('* => *', slideTo('left')),
+  transition('* => *', slideTo('right')),
+  transition('* => *', slideTo('left')),
+  transition('* => *', slideTo('right')),
 ]);
 
 export const transformer = trigger('routeAnimations', [
-  transition('* => isLeft', translateTo({ x: -100, y: -100, rotate: -720 })),
-  transition('* => isRight', translateTo({ x: 100, y: -100, rotate: 90 })),
-  transition('isRight => *', translateTo({ x: -100, y: -100, rotate: 360 })),
-  transition('isLeft => *', translateTo({ x: 100, y: -100, rotate: -360 })),
+  transition('* => *', translateTo({ x: -100, y: -100, rotate: -720 })),
+  transition('* => *', translateTo({ x: 100, y: -100, rotate: 90 })),
+  transition('* => *', translateTo({ x: -100, y: -100, rotate: 360 })),
+  transition('* => *', translateTo({ x: 100, y: -100, rotate: -360 })),
 ]);
 
 function slideTo(direction: any) {

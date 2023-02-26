@@ -13,6 +13,7 @@ import { NameParentComponent } from './exercises/src/intercept-input-setter/name
 import { AstronautComponent } from './exercises/src/service-interaction/astronaut/astronaut.component';
 import { MissionControlComponent } from './exercises/src/service-interaction/missioncontrol/missioncontrol.component';
 import { AttributeDirectiveComponent } from './exercises/src/attribute-directive/attribute-directive.component';
+import { RestaurantComponent } from './exercises/src/restaurant/restaurant.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -36,20 +37,48 @@ const routes: Routes = [
     component: ExercisesComponent,
     data: { animation: 'fader' },
     children: [
-      { path: 'votetaker', component: VoteTakerComponent, data: { animation: 'fader' } },
-      { path: 'dynamicload', component: DynamicloadComponent, data: { animation: 'fader' } },
+      {
+        path: 'votetaker',
+        component: VoteTakerComponent,
+        data: { animation: 'fader' },
+      },
+      {
+        path: 'dynamicload',
+        component: DynamicloadComponent,
+        data: { animation: 'fader' },
+      },
       {
         path: 'ngOnchanges',
         component: VersionParentComponent,
       },
-      { path: 'countdown', component: CountdownViewChildParentComponent, data: { animation: 'fader' } },
-      { path: 'Setter', component: NameParentComponent , data: { animation: 'fader' } },
-      { path: 'Service', component: MissionControlComponent , data: { animation: 'fader' } },
-      { path: 'attribute-directive', component: AttributeDirectiveComponent , data: { animation: 'fader' } },
+      {
+        path: 'countdown',
+        component: CountdownViewChildParentComponent,
+        data: { animation: 'fader' },
+      },
+      {
+        path: 'Setter',
+        component: NameParentComponent,
+        data: { animation: 'fader' },
+      },
+      {
+        path: 'Service',
+        component: MissionControlComponent,
+        data: { animation: 'fader' },
+      },
+      {
+        path: 'attribute-directive',
+        component: AttributeDirectiveComponent,
+        data: { animation: 'fader' },
+      },
+      {
+        path: 'restaurant',
+        component: RestaurantComponent,
+        data: { animation: 'fader' },
+      },
     ],
   },
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,0 +1,15 @@
+<div class="exercise">
+  <h1>Restaurant</h1>
+  <button (click)="lancerCommande()">Commander un Kebab</button>
+  <button (click)="_salade.next('salade')">salade</button>
+  <button (click)="_tomate.next('tomate')">tomate</button>
+  <button (click)="_oignon.next('oignon')">oignon</button>
+  <button (click)="_viande.next('viande')">viande</button>
+  <button (click)="_pain.next('pain')">pain</button>
+  <ng-container *ngIf="livraison$ | async as produit">
+    <section *ngIf="produit?.produit">
+      <h2>Produit</h2>
+      <p>{{ produit | json }}</p>
+    </section>
+  </ng-container>
+</div>

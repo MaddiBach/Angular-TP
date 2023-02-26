@@ -1,0 +1,13 @@
+.banner {
+    display: block;
+    padding: 15px 15px;
+    border-radius: 10px;
+  }
+  .primary {
+    color: white;
+    background-color: #edadad;
+  }
+  .placeholder {
+    background-color: #ededed;
+    border: dashed #e0e0e0 2px;
+  }

@@ -25,6 +25,11 @@ import { NameChildComponent } from './exercises/src/intercept-input-setter/name-
 import { NameParentComponent } from './exercises/src/intercept-input-setter/name-parent/name-parent.component';
 import { AstronautComponent } from './exercises/src/service-interaction/astronaut/astronaut.component';
 import { MissionControlComponent } from './exercises/src/service-interaction/missioncontrol/missioncontrol.component';
+import { AttributeDirectiveComponent } from './exercises/src/attribute-directive/attribute-directive.component';
+import { HighlightDirective } from './exercises/src/attribute-directive/highlight-directive.directive';
+import { HideAfterDirective } from './exercises/src/attribute-directive/hide-after.directive';
+
+
 
 @NgModule({
   declarations: [
@@ -52,6 +57,9 @@ import { MissionControlComponent } from './exercises/src/service-interaction/mis
     NameParentComponent,
     AstronautComponent,
     MissionControlComponent,
+    AttributeDirectiveComponent,
+    HighlightDirective,
+    HideAfterDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

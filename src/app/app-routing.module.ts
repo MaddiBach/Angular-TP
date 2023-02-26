@@ -12,6 +12,7 @@ import { CountdownViewChildParentComponent } from './exercises/src/child-local-i
 import { NameParentComponent } from './exercises/src/intercept-input-setter/name-parent/name-parent.component';
 import { AstronautComponent } from './exercises/src/service-interaction/astronaut/astronaut.component';
 import { MissionControlComponent } from './exercises/src/service-interaction/missioncontrol/missioncontrol.component';
+import { AttributeDirectiveComponent } from './exercises/src/attribute-directive/attribute-directive.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -33,19 +34,22 @@ const routes: Routes = [
   {
     path: 'exercises',
     component: ExercisesComponent,
+    data: { animation: 'fader' },
     children: [
-      { path: 'votetaker', component: VoteTakerComponent },
-      { path: 'dynamicload', component: DynamicloadComponent },
+      { path: 'votetaker', component: VoteTakerComponent, data: { animation: 'fader' } },
+      { path: 'dynamicload', component: DynamicloadComponent, data: { animation: 'fader' } },
       {
         path: 'ngOnchanges',
         component: VersionParentComponent,
       },
-      { path: 'countdown', component: CountdownViewChildParentComponent },
-      { path: 'Setter', component: NameParentComponent },
-      { path: 'Service', component: MissionControlComponent },
+      { path: 'countdown', component: CountdownViewChildParentComponent, data: { animation: 'fader' } },
+      { path: 'Setter', component: NameParentComponent , data: { animation: 'fader' } },
+      { path: 'Service', component: MissionControlComponent , data: { animation: 'fader' } },
+      { path: 'attribute-directive', component: AttributeDirectiveComponent , data: { animation: 'fader' } },
     ],
   },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

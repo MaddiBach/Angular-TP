@@ -210,3 +210,6 @@ section .form-container .user .formBx form .signup a {
   perspective: 1200px;
   transform-style: preserve-3d;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,4 +1,20 @@
-section {
+.form-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* section {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -85,9 +101,9 @@ section .form-container .user .formBx form .signup a {
   font-weight: 600;
   text-decoration: none;
   color: #d6002ef6;
-}
+} */
 
-/* section .form-container .signupBx {
+/* /* section .form-container .signupBx {
   pointer-events: none;
 }
 

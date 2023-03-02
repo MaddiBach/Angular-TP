@@ -1,0 +1,59 @@
+<!-- <body>
+  <section>
+    <div class="form-container">
+      <div class="user signin">
+        <div class="formBx">
+          <form action="" onsubmit="return false;">
+            <h2>Sign In</h2>
+            <input type="text" name="" placeholder="Username" />
+            <input type="password" name="" placeholder="Password" />
+            <input type="submit" name="" value="Login" />
+            <p class="signup">
+              Don't have an account ?
+              <a [routerLink]="['/register']">Sign Up.</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body> -->
+<div class="form-container">
+  <h1>Form Array</h1>
+  <form [formGroup]="myForm">
+    Value: {{ myForm.value | json }}
+
+    <hr />
+
+    <mat-form-field class="full">
+      <input matInput placeholder="email" formControlName="email" />
+    </mat-form-field>
+
+    <div formArrayName="phones">
+      <div
+        *ngFor="let phone of phoneForms.controls; let i = index"
+        [formGroupName]="i"
+      >
+        <mat-form-field class="xs">
+          <input matInput placeholder="area" formControlName="area" />
+        </mat-form-field>
+
+        <mat-form-field class="xs">
+          <input matInput placeholder="prefix" formControlName="prefix" />
+        </mat-form-field>
+
+        <mat-form-field class="sm">
+          <input matInput placeholder="line" formControlName="line" />
+        </mat-form-field>
+
+        <button mat-raised-button color="warn" (click)="deletePhone(i)">
+          Delete
+        </button>
+      </div>
+    </div>
+
+    <button mat-raised-button color="primary" (click)="addPhone()">
+      Add Phone Number
+    </button>
+  </form>
+</div>

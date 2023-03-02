@@ -1,41 +1,49 @@
 <div class="exercise">
-
-   <!-- card html -->
-   <div class="card">
+  <!-- card html -->
+  <div class="card">
     <div class="card-header">
-       <h2>Attribute Directive</h2>
+      <h2>Attribute Directive</h2>
     </div>
     <div class="card-body">
-       <p>
-          Dans cet exercice, vous allez créer une directive d'attribut qui
-            changera la couleur du texte d'un élément HTML quand l'utilisateur
-            passera la souris sur cet élément.
-       </p>
-       <p>
-            La directive devrait pouvoir être appliquée à n'importe quel élément.
-       </p>
-       <p>
-            La directive devrait être nommée HighlightDirective.
-       </p>
-       <p>
-          La directive devrait avoir une propriété d'entrée qui permet de
-            définir la couleur de la mise en évidence.
-       </p>
+      <p>
+        Dans cet exercice, vous allez créer une directive d'attribut qui
+        changera la couleur du texte d'un élément HTML quand l'utilisateur
+        passera la souris sur cet élément.
+      </p>
+      <p>
+        La directive devrait pouvoir être appliquée à n'importe quel élément.
+      </p>
+      <p>La directive devrait être nommée HighlightDirective.</p>
+      <p>
+        La directive devrait avoir une propriété d'entrée qui permet de définir
+        la couleur de la mise en évidence.
+      </p>
     </div>
-    <p highlightDirective="blue">
-        Appliquez la directive ici 
-    </p>
+    <p highlightDirective="yellow">Appliquez la directive ici</p>
 
     <h1>Structural Directives</h1>
-    <section *HideAfter="3000 as time; then placeholder; let counter = counter; let default" class="banner primary">
+    <section
+      *HideAfter="
+        10000 as time;
+        then placeholder;
+        let counter = counter;
+        let default
+      "
+      class="banner primary"
+    >
       <h2>Temporary content</h2>
-      <p>This layout should disappear in {{default}} seconds. It disappears in: {{counter}}</p>
+      <p>
+        This layout should disappear in {{ default }} seconds. It disappears in:
+        {{ counter }}
+      </p>
     </section>
     <ng-template #placeholder let-hiddenAfter="HideAfter" let-myDefault>
       <section class="banner placeholder">
         <h2>Placeholder</h2>
-        <p>Here was some content. It was visible for {{hiddenAfter}} seconds.</p>
+        <p>
+          Here was some content. It was visible for {{ hiddenAfter }} seconds.
+        </p>
       </section>
     </ng-template>
- </div>
+  </div>
 </div>

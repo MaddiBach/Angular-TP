@@ -1,0 +1,33 @@
+mat-form-field {
+  display: block;
+}
+
+.mat-accent {
+  background-color: #42a948 !important;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+  border-bottom: 5px solid #42a948;
+}
+
+ul {
+  text-align: left;
+}
+
+.ng-valid .mat-form-field-underline {
+  background-color: green;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.form-container mat-form-field {
+  width: 100%;
+  margin: 10px;
+}

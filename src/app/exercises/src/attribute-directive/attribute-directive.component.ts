@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { HighlightDirective } from './highlightdirective.directive';
 
 @Component({
-  selector: 'app-attribute-directive',
+  selector: '[app-attribute-directive]',
   templateUrl: './attribute-directive.component.html',
-  styleUrls: ['./attribute-directive.component.css']
+  styleUrls: ['./attribute-directive.component.css'],
 })
-export class AttributeDirectiveComponent  {
+export class AttributeDirectiveComponent {
   color = 'yellow';
-  constructor() { }
+  constructor(private el: ElementRef) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+  highlight(color: string) {
+    this.el.nativeElement.style.backgroundcolor = color;
   }
 }

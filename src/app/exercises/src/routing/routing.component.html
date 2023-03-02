@@ -1,0 +1,10 @@
+<div class="exercise">
+  <li
+    *ngFor="let businessunit of businessunits"
+    (click)="onSelect(businessunit)"
+    class="badge"
+    [class.selected]="isSelected(businessunit)"
+  >
+    <span>{{ businessunit.id }}</span> {{ businessunit.name }}
+  </li>
+</div>

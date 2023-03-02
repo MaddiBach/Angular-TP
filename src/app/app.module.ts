@@ -4,8 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { ArrayFormComponent } from './login/array-form.component';
+import { ValidFormComponent } from './register/valid-form.component';
 import { ExercisesComponent } from './exercises/exercises.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -28,14 +28,21 @@ import { MissionControlComponent } from './exercises/src/service-interaction/mis
 import { AttributeDirectiveComponent } from './exercises/src/attribute-directive/attribute-directive.component';
 import { HighlightDirective } from './exercises/src/attribute-directive/highlight-directive.directive';
 import { HideAfterDirective } from './exercises/src/attribute-directive/hide-after.directive';
-
-
+import { RoutingComponent } from './exercises/src/routing/routing.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
+import { ExampleDirective } from './example.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
+    ArrayFormComponent,
+    ValidFormComponent,
     ExercisesComponent,
     HomeComponent,
     NavbarComponent,
@@ -60,8 +67,21 @@ import { HideAfterDirective } from './exercises/src/attribute-directive/hide-aft
     AttributeDirectiveComponent,
     HighlightDirective,
     HideAfterDirective,
+    RoutingComponent,
+    ExampleDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatChipsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
